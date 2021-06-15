@@ -19,6 +19,13 @@ package com.example.android.devbyteviewer
 
 import android.app.Application
 import timber.log.Timber
+import android.os.Build
+import androidx.work.*
+import com.example.android.devbyteviewer.work.RefreshDataWorker
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import java.util.concurrent.TimeUnit
 
 /**
  * Override application to setup background work via WorkManager
