@@ -1,0 +1,181 @@
+/*---------- example css ----------*/
+.l-nav-height{
+  height: 114px;
+}
+.l-nav {
+  position: fixed !important;
+  z-index: 99;
+  padding: 19px 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: $color-white;
+  @include transition-default;
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+  .c-logo {
+    width: 76px;
+    height: 76px;
+    float: left;
+    a {
+      display: block;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .c-right-menu {
+    float: right;
+    &__pc {
+      position: absolute;
+      z-index: 3;
+      top: 28px;
+      right: 70px;
+      ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li{
+          display: inline-block;
+          a{
+            padding: 0 10px;
+            color: $color-black;
+            @include transition-default;
+            font-weight: 700;
+            &:hover{
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.c-menu-expand {
+  width: 45px;
+  height: 34px;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  z-index: 3;
+  top: 46px;
+  margin-top: -24px;
+  right: 15px;
+  display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+    border: none;
+  }
+  span {
+    background-color: $color-black;
+    font-size: 0;
+    width: 42px;
+    height: 4px;
+    position: absolute;
+    top: 15px;
+    left: 2px;
+    // @include border-radius(2px);
+    &:before,
+    &:after {
+      content: "";
+      background-color: $color-black;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      @include transition-all(0.4s);
+      // @include border-radius(2px);
+    }
+    &:before {
+      transform: translateY(-8px);
+      width: 100%;
+    }
+    &:after {
+      transform: translateY(8px);
+      width: 31px;
+      left: auto;
+      right: 0;
+    }
+  }
+  &.is-active {
+    span {
+      background-color: transparent;
+      left: 5px;
+      &:before,
+      &:after {
+        background-color: $color-black;
+      }
+      &:before {
+        transform: translateY(0px) rotate(20deg);
+        width: 42px;
+      }
+      &:after {
+        transform: translateY(0px) rotate(-20deg);
+        width: 42px;
+      }
+    }
+  }
+}
+.has-page-open{
+  z-index: 99;
+}
+//example responsive css
+@media (min-width: $screen-sm-min) {
+  //mobile lanscape
+}
+@media (min-width: $screen-md-min) {
+  //ipad portrait
+  // .l-nav{
+  //   right: 8px;
+  // }
+  .c-menu-expand{
+    right: 0;
+  }
+}
+@media (min-width: $screen-lg-min) {
+  //ipad lanscape & pc 1024x768px
+  .l-nav {
+    .c-right-menu {
+      &__pc {
+        ul{
+          li{
+            a{
+              padding: 0 20px;
+              &:hover{
+                color: $color-primary;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: $screen-xl-min) {
+  //pc & mac 1280px grow up
+  .l-nav {
+    .c-right-menu {
+      &__pc {
+        top: 24px;
+        right: 98px;
+        ul{
+          li{
+            a{
+              padding: 0 30px;
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: $screen-xxl-min) {
+  //pc & mac 1440px grow up
+}
+//end example responsive css
+/*---------- end example css ----------*/

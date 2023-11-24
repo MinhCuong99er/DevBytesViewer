@@ -1,0 +1,215 @@
+/*---------- example css ----------*/
+.js-app-close {
+  cursor: pointer;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  float: left;
+  position: absolute;
+  top: 40px;
+  right: 30px;
+  opacity: 0;
+  visibility: hidden;
+  &:focus {
+    outline: none;
+  }
+  &:before,
+  &:after {
+    content: "";
+    background-color: $color-black;
+    position: absolute;
+    left: -2px;
+    top: 14px;
+    width: 100%;
+    height: 100%;
+    @include transition-all(0.4s);
+    // @include border-radius(2px);
+  }
+  &:before {
+    width: 30px;
+    height: 3px;
+    transform: rotate(45deg);
+  }
+  &:after {
+    transform: rotate(-45deg);
+    width: 30px;
+    height: 3px;
+  }
+}
+.has-menu-open {
+  .js-app-close {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.c-app-ovelay {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: $color-black;
+  background: rgba($color-black, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  @include transition-all(0.2s);
+}
+.has-ovelay-show {
+  visibility: visible;
+  opacity: 1;
+  z-index: 1000;
+}
+.has-menu-open {
+  transform: translate3d(-275px, 0, 0);
+  -webkit-transform: translate3d(-275px, 0, 0);
+}
+.c-menu {
+  width: 275px;
+  position: fixed;
+  z-index: 1001;
+  top: 0;
+  right: -275px;
+  bottom: 0;
+  padding-top: 40px;
+  background: $color-bg2;
+  @include transition-all(0.2s);
+  &__box {
+    padding-top: 80px;
+    padding-left: 60px;
+    &__language {
+      margin-bottom: 68px;
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+          display: inline-block;
+          padding-right: 25px;
+          font-size: 15px;
+          cursor: pointer;
+          @include transition-default;
+          font-weight: 300;
+          &:last-child {
+            padding: 0;
+          }
+        }
+      }
+    }
+    &__menu {
+      margin-bottom: 130px;
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+          margin-bottom: 15px;
+          a {
+            font-weight: 700;
+            color: $color-black;
+            font-size: 20px;
+            @include transition-default;
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+    &__social{
+      ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li{
+          display: inline-block;
+          padding-right: 25px;
+          &:last-child{
+            padding: 0;
+          } 
+          a{
+            color: $color-black;
+            font-weight: 300;
+            @include transition-default;
+            &:hover{
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//example responsive css
+@media (min-width: $screen-sm-min) {
+  //mobile lanscape
+}
+@media (min-width: $screen-md-min) {
+  //ipad portrait
+}
+@media (min-width: $screen-lg-min) {
+  //ipad lanscape & pc 1024x768px
+  .has-menu-open {
+    transform: translate3d(-355px, 0, 0);
+    -webkit-transform: translate3d(-355px, 0, 0);
+  }
+  .c-menu {
+    width: 355px;
+    right: -355px;
+    &__box {
+      &__language {
+        ul {
+          li {
+            &:hover {
+              color: $color-primary;
+            }
+          }
+        }
+      }
+      &__menu {
+        ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          li {
+            margin-bottom: 30px;
+            a {
+              font-size: 20px;
+              &:hover {
+                color: $color-primary;
+              }
+            }
+          }
+        }
+      }
+      &__social {
+        ul {
+          li {
+            a {
+              &:hover {
+                color: $color-primary;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: $screen-xl-min) {
+  //pc & mac 1280px grow up
+  .js-app-close {
+    right: 145px;
+  }
+  .has-menu-open {
+    transform: translate3d(-510px, 0, 0);
+    -webkit-transform: translate3d(-510px, 0, 0);
+  }
+  .c-menu {
+    width: 510px;
+    right: -510px;
+  }
+}
+//end example responsive css
+/*---------- end example css ----------*/

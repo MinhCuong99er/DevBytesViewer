@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import './css/bootstrap.min.css';
+import './index.scss';
 // import './css/slick.css';
 // import './css/animate.min.css';
-import './css/styles.0e4338761429b4eb16ac.css';
+// import './css/styles.0e4338761429b4eb16ac.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 

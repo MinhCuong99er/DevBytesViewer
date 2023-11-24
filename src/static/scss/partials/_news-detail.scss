@@ -1,0 +1,95 @@
+/*---------- example css ----------*/
+.c-news-detail {
+  margin: 66px 0;
+}
+.c-news-detail-box {
+  &__title {
+    margin-bottom: 20px;
+    h1 {
+      font-weight: 700;
+      font-size: 26px;
+    }
+  }
+  .b-maincontent {
+    margin-bottom: 20px;
+  }
+}
+.c-news-detail-img {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      margin-bottom: 30px;
+      cursor: pointer;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+.c-news-lists-slider {
+  margin: 66px 0;
+  &__top {
+    text-align: center;
+    margin-bottom: 52px;
+    h2 {
+      font-size: 26px;
+      font-weight: 700;
+    }
+  }
+}
+//example responsive css
+@media (min-width: $screen-sm-min) {
+  //mobile lanscape
+}
+@media (min-width: $screen-md-min) {
+  //ipad portrait
+  .c-news-detail-box {
+    margin-bottom: 125px;
+    &__title {
+      h1 {
+        font-size: 40px;
+        font-weight: 700;
+      }
+    }
+    .b-maincontent {
+      p {
+        font-size: 20px;
+        line-height: 26px;
+      }
+    }
+  }
+  .c-news-detail-img {
+    ul {
+      li {
+        margin-bottom: 60px;
+      }
+    }
+  }
+  .c-news-lists-slider {
+    margin: 125px 0;
+    &__top {
+      margin-bottom: 104px;
+      text-align: center;
+      h2 {
+        font-size: 40px;
+      }
+      span {
+        font-size: 20px;
+        line-height: 26px;
+      }
+    }
+  }
+}
+@media (min-width: $screen-lg-min) {
+  //ipad lanscape & pc 1024x768px
+}
+@media (min-width: $screen-xl-min) {
+  //pc & mac 1280px grow up
+}
+@media (min-width: $screen-xxl-min) {
+  //pc & mac 1440px grow up
+}
+//end example responsive css
+/*---------- end example css ----------*/

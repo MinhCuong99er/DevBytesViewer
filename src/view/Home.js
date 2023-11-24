@@ -1,11 +1,14 @@
 
 import React from "react";
+import Header from "../layout/Header";
 
 function Home(props) {
 
   return (
     <>
-      <h1>Hello</h1>
+      <div id="wrapper" classname="hasbg transparent" style={{ paddingTop: 74 }}>
+        <Header />
+      </div>
     </>
   );
 }
