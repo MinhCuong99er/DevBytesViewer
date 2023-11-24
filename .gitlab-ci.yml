@@ -1,0 +1,34 @@
+variables:
+  HTV_REGISTRY: "registry.hyundai.thanhcong.vn"
+  COMPANY: "htv"
+  PROJECT: "mmp"
+  IMAGE_TAG: "${DOCKER_REGISTRY}/${COMPANY}/${PROJECT}/${CI_PROJECT_NAME}-${CI_COMMIT_BRANCH}:${CI_COMMIT_SHORT_SHA}"
+stages:
+  - build_image
+  - update_manifest
+
+mmp-survey-build:
+  stage: build_image
+  image: docker:20.10.16-dind
+  script:
+    - echo "-------Build and Push image to HTV Registry--------"
+    - echo "${DOCKER_PASSWORD}" | docker login --username ${DOCKER_USER} --password-stdin ${DOCKER_REGISTRY}
+    - docker build -t ${IMAGE_TAG} .
+    - docker push ${IMAGE_TAG}
+  only:
+    - main
+  
+mmp-survey-cd:
+  stage: update_manifest
+  image: alpine:latest
+  script:
+    - apk update && apk add git
+    - git config --global user.email "cicd.htv@hyundai.thanhcong.vn"
+    - git config --global user.name "cicd.htv"
+    - git clone -b master https://${CICD_USER}:${CICD_PASSWORD}@gitlab.hyundai.thanhcong.vn/htcadmin/mmp.git
+    - cd mmp/mmp-survey
+    - sed -i -r "s#${HTV_REGISTRY}.*#${IMAGE_TAG}#" survey-deployment.yaml
+    - git add survey-deployment.yaml && git commit -m 'Update Manifest for Deploying CICD'
+    - git push
+  only:
+    - main
