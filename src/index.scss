@@ -1,7 +1,16 @@
 @charset "UTF-8";
 
+@import '~bootstrap-icons/font/bootstrap-icons.css';
+
+@import 'static/css-main/screen.css';
+@import 'static/css-main/grid.css';
+@import 'static/css-main/kirki-styles-global-inline-css.css';
+@import 'static/css-main/reset.css';
+@import 'static/css-main/wordpress.css';
+
 @import 'static/scss/style.scss';
 @import 'static/css/bootstrap.min.css';
 @import 'static/css/style.css';
+@import 'static/css/fontawesome-all.min.css';
 
 
