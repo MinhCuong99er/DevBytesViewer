@@ -1,0 +1,12 @@
+#option_btn {
+    height: 125px;
+}
+
+.parallax {
+    overflow: hidden;
+}
+
+.rs-parallax-wrap a.rev-btn .fa-chevron-right {
+    font-size: 12px;
+    margin-left: 10px;
+}

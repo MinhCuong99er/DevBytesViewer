@@ -83,7 +83,12 @@ function HomeWhyChooseUs() {
                     </div>
                 </div>
             </div>
-            <div data-bg="https://themes-themegoods.b-cdn.net/grandtour/demo/wp-content/uploads/2016/12/pexels-photo-24377.jpg" className="parallax rocket-lazyload entered lazyloaded" style={{ height: '60vh', backgroundImage: 'url("https://themes-themegoods.b-cdn.net/grandtour/demo/wp-content/uploads/2016/12/pexels-photo-24377.jpg")' }} data-ll-status="loaded" />
+            <div className="parallax d-none" data-jarallax-video="https://www.youtube.com/watch?v=JPe2mwq96cw" style={{ height: '40vh' }} data-jarallax-original-styles="height:40vh; ">
+                <div id="jarallax-container-0" style={{ position: 'absolute', top: '0px', left: '0px', width: '100%', height: '100%', overflow: 'hidden', zIndex: -100 }}>
+                    <div style={{ backgroundPosition: '50% 50%', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundImage: 'url("https://img.youtube.com/vi/JPe2mwq96cw/maxresdefault.jpg")', position: 'fixed', top: '0px', left: '0px', width: '1424px', height: '784.695px', overflow: 'hidden', pointerEvents: 'none', transformStyle: 'preserve-3d', backfaceVisibility: 'hidden', willChange: 'transform, opacity', marginTop: '168.152px', transform: 'translate3d(0px, 59.0195px, 0px)', display: 'none' }} />
+                    <iframe id="VideoWorker-0" frameBorder={0} allowFullScreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="Spectacular Norway - from the air" width={640} height={360} src="https://www.youtube.com/embed/JPe2mwq96cw?autohide=1&rel=0&autoplay=0&playsinline=1&iv_load_policy=3&modestbranding=1&controls=0&showinfo=0&disablekb=1&enablejsapi=1&origin=https%3A%2F%2Fthemes.themegoods.com&widgetid=1" style={{ position: 'fixed', inset: '0px', width: '1424px', height: '1201px', maxWidth: 'none', maxHeight: 'none', margin: '-40px 0px 0px', zIndex: -1, transform: 'translate3d(0px, 59.0195px, 0px)' }} />
+                </div>
+            </div>
         </>
     );
 }

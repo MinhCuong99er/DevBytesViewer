@@ -6,6 +6,7 @@ import HomeArticles from "../components/Home/HomeArticles";
 import HomeWhyChooseUs from "../components/Home/HomeWhyChooseUs";
 import HomeBestValueTrips from "../components/Home/HomeBestValueTrips";
 import HomePopularDestinations from "../components/Home/HomePopularDestinations";
+import HomeOptions from "../components/Home/HomeOptions";
 
 function Home() {
 
@@ -19,6 +20,7 @@ function Home() {
         <HomeArticles />
       </div>
       <Footer />
+      <HomeOptions />
     </>
   );
 }

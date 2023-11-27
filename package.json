@@ -21,7 +21,7 @@
     "web-vitals": "^3.5.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts start -p 1000",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

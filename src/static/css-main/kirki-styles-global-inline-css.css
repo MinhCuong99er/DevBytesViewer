@@ -86,7 +86,7 @@ h5,
 h6,
 h7,
 #autocomplete li strong {
-    font-weight: 700;
+    font-weight: 700 !important;
     letter-spacing: 0px;
 }
 
@@ -103,7 +103,7 @@ h3 {
 }
 
 h4 {
-    font-size: 20px;
+    font-size: 20px !important;
 }
 
 h5 {
@@ -250,7 +250,7 @@ body.woocommerce-page #content div.product .woocommerce-tabs ul.tabs li.active a
 .single_tour_booking_wrapper .single_tour_view_desc,
 .single_tour_booking_wrapper .single_tour_view_icon,
 .tour_product_variable_title {
-    color: #000000;
+    color: #000000 !important;
 }
 
 body.page.page-template-gallery-archive-split-screen-php #fp-nav li .active span,
