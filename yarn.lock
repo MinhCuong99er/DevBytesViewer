@@ -6189,6 +6189,13 @@ jake@^10.8.5:
     filelist "^1.0.1"
     minimatch "^3.0.4"
 
+jarallax@^2.1.4:
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/jarallax/-/jarallax-2.1.4.tgz#76ed3a155b2c70471a8bfb1ed557bcb97eaf0197"
+  integrity sha512-MZHX2JNKj5sply24QSTrF5hdK0HGDe26YJcGvO3u0rI3ls348KSYPONCQTJ2A3EdM/8k4rjwgW+AdxeLeY8E5A==
+  dependencies:
+    video-worker "^2.1.5"
+
 jest-changed-files@^27.5.1:
   version "27.5.1"
   resolved "https://registry.yarnpkg.com/jest-changed-files/-/jest-changed-files-27.5.1.tgz#a348aed00ec9bf671cc58a66fcbe7c3dfd6a68f5"
@@ -9750,6 +9757,11 @@ vary@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
+
+video-worker@^2.1.5:
+  version "2.1.5"
+  resolved "https://registry.yarnpkg.com/video-worker/-/video-worker-2.1.5.tgz#7906dba856a92e61dcdd8a16d6d21f201559021e"
+  integrity sha512-lX6mywHsMeo2fB8smiaffQYpkcBaQh63oVrAsGekAOoIE5dv39YchJhZ6rresiNcJHy+Hv59dd+1yZs08jnFXA==
 
 w3c-hr-time@^1.0.2:
   version "1.0.2"

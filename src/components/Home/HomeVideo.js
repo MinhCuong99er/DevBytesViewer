@@ -1,11 +1,24 @@
 
-import React from "react";
+import React, { useEffect } from "react";
+
+import { jarallax, jarallaxVideo } from "jarallax";
+import "jarallax/dist/jarallax.min.css";
+
+// Optional video extension
+jarallaxVideo();
 
 function HomeVideo() {
 
+    useEffect(() => {
+        jarallax(document.querySelectorAll(".jarallax"), {
+            speed: 0.2,
+            videoSrc: 'https://www.youtube.com/watch?v=JPe2mwq96cw'
+        });
+    }, [])
+
     return (
         <>
-            <div className="ppb_wrapper  ">
+            <div className="ppb_wrapper d-none ">
                 <div className="one withsmallpadding ppb_tour_search_youtube parallax withbg " data-jarallax-video="https://www.youtube.com/watch?v=JPe2mwq96cw" style={{ textAlign: 'center', height: '800px', color: '#ffffff' }} data-jarallax-original-styles="text-align:center;height:800px;color:#ffffff;">
                     <div className="overlay_background" style={{ background: 'rgba(0,0,0,0.3)' }} />
                     <div className="center_wrapper">
