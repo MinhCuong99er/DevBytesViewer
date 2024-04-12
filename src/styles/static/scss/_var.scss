@@ -22,11 +22,6 @@ $color-secondary: #d02d34;
 $color-info: #17a2b8;
 $color-title: #44494d;
 $color-text1: #212529;
-//$color-success: #28a745;
-//$color-warning: #ffc107;
-//$color-danger: #dc3545;
-//$color-light: #f8f9fa;
-//$color-dark: #343a40;
 
 //color list
 $color-black: #000;
@@ -34,24 +29,6 @@ $color-bg-footer: #2a282f;
 $color-bg1: #28262d;
 $color-bg2: #1a191e;
 $color-bg3: #eee;
-// $color-green-about: #288123;
-// $color-green: #37b030;
-// $color-green-shadow: #268e19;
-// $color-text-shadow: #f9c776;
-// $color-gray: #4a4a4a;
-// $color-text-count-shadow: #f8b852;
-// $color-title-h2: #032348;
-//$color-indigo: #6610f2;
-// $color-purple: #1a0467;
-//$color-pink: #e83e8c;
-//$color-red: #dc3545;
-//$color-orange: #fd7e14;
-//$color-yellow: #ffc107;
-//$color-green: #28a745;
-//$color-teal: #20c997;
-//$color-cyan: #17a2b8;
-//$color-gray: #6c757d;
-//$color-gray-dark: #343a40;
 
 //width
 $container-sm: 375px;
@@ -84,15 +61,9 @@ $screen-lg-max: ($screen-xl - 1);
 
 //font
 $font-sour: 'Source Sans Pro';
-// $font-lato: 'Lato', Arial, 'Helvetica Neue', Helvetica, sans-serif;
 $font-roboto: 'Roboto';
-$font-dar: 'SVN-Darleston';
-// $font-roboto-condensed: 'Roboto Condensed', 'Roboto', Arial;
 $font-open-sans: 'Open Sans', 'Roboto', Arial, sans-serif;
-$font-awesome: 'FontAwesome';
-$font-awesome-5-free: 'Font Awesome 5 Free';
 $font-site: $font-sour;
-// $font-muli: 'Muli', sans-serif;
 
 //font size
 $font-size-xs: 14px;

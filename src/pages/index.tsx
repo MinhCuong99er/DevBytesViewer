@@ -6,7 +6,6 @@ import Helmet from '@src/helpers/Helmet'
 import Layout from '@src/layouts'
 import withLayout from '@src/lib/withLayout'
 import { withStaticProps } from '@src/helpers/wrapperProps'
-
 import PageLoading from '@src/helpers/PageLoading'
 
 const PageViewHandler = dynamic(() => import('@src/components/home'), {

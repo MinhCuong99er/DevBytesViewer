@@ -26,10 +26,6 @@ if (typeof window !== 'undefined') {
   window.jQuery = jQuery
   window.$ = jQuery
   require('bootstrap')
-  /* const Swiper = require('swiper')
-  window.Swiper = Swiper
-  require('../../public/static/packages/jquery.nanogallery2.core')
-  require('jquery-ui/ui/widgets/datepicker') */
   const AOS = require('aos')
   window.AOS = AOS
 }
@@ -52,13 +48,6 @@ const withLayout = (ComposedComponent) => {
       if (typeof window !== 'undefined') {
         require('../../public/static/js/main')
         require('../../public/static/js/scrollToTop')
-        /* setTimeout(() => {
-          window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: 'smooth'
-          },3000)
-        }) */
       }
     }
 
