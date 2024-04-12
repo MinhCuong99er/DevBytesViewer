@@ -25,9 +25,6 @@ if (process.env.NODE_ENV == 'production') {
 if (typeof window !== 'undefined') {
   window.jQuery = jQuery
   window.$ = jQuery
-  require('bootstrap')
-  const AOS = require('aos')
-  window.AOS = AOS
 }
 
 function getComponentDisplayName(component) {

@@ -4,64 +4,6 @@
   background: $color-grey !important;
 }
 
-.c-antd-cropimg {
-  --heightUpload: 105px;
-  position: relative;
-  z-index: 2;
-  top: 0;
-  left: 50%;
-  width: 30%;
-  height: 100%;
-  opacity: 1;
-  transform: translateX(-50%);
-  .ant-upload-picture-card-wrapper {
-    width: 100%;
-    height: var(--heightUpload);
-    .ant-upload {
-      width: 100%;
-      height: var(--heightUpload);
-      border-radius: 50%;
-    }
-    .ant-upload-list-picture-card-container {
-      width: 100%;
-      height: var(--heightUpload);
-    }
-    .ant-upload-list {
-      .ant-upload-list-picture-card-container {
-        .ant-upload-list-item {
-          border-radius: 50%;
-          padding: 0;
-          .ant-upload-list-item-info {
-            border-radius: 50%;
-          }
-        }
-      }
-    }
-    .ant-upload-list-item-actions {
-      opacity: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: auto;
-      a {
-        display: flex;
-      }
-    }
-    .ant-upload-list-item {
-      // display: none;
-      // &:hover, &:focus {
-      //   display: block;
-      // }
-    }
-  }
-}
-.c-antd-group-cropimg {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  display: block;
-  height: auto;
-}
 .c-title-hid {
   @include excerpt(1.2, 2);
 }
@@ -381,9 +323,6 @@ ul {
 
 @media (min-width: $screen-sm-phone-large) {
   //ipad portrait
-  .c-antd-cropimg {
-    --heightUpload: 120px;
-  }
 }
 
 @media (min-width: $screen-md-min) {
