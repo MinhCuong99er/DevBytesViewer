@@ -17,6 +17,7 @@
   }
   .is-content {
     width: 100%;
+    @include flex-center();
     .is-btn-group {
       display: flex;
       justify-content: space-evenly;

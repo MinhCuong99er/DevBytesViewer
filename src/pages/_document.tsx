@@ -1,4 +1,3 @@
-import { ReactElement, JSXElementConstructor, ReactFragment } from 'react'
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document'
 import { Helmet, HelmetData } from 'react-helmet'
 
@@ -14,7 +13,6 @@ export default class MyDocument extends Document<MyDocumentProps> {
     helmet: HelmetData
     html: string
     head?: JSX.Element[]
-    styles?: ReactElement<any, string | JSXElementConstructor<any>>[] | ReactFragment
   }> {
     const { ...args } = ctx
     const documentProps = await super.getInitialProps(ctx)
