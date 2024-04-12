@@ -1,0 +1,425 @@
+/*---------- example css ----------*/
+
+.background-grey {
+  background: $color-grey !important;
+}
+
+.c-antd-cropimg {
+  --heightUpload: 105px;
+  position: relative;
+  z-index: 2;
+  top: 0;
+  left: 50%;
+  width: 30%;
+  height: 100%;
+  opacity: 1;
+  transform: translateX(-50%);
+  .ant-upload-picture-card-wrapper {
+    width: 100%;
+    height: var(--heightUpload);
+    .ant-upload {
+      width: 100%;
+      height: var(--heightUpload);
+      border-radius: 50%;
+    }
+    .ant-upload-list-picture-card-container {
+      width: 100%;
+      height: var(--heightUpload);
+    }
+    .ant-upload-list {
+      .ant-upload-list-picture-card-container {
+        .ant-upload-list-item {
+          border-radius: 50%;
+          padding: 0;
+          .ant-upload-list-item-info {
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+    .ant-upload-list-item-actions {
+      opacity: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+      a {
+        display: flex;
+      }
+    }
+    .ant-upload-list-item {
+      // display: none;
+      // &:hover, &:focus {
+      //   display: block;
+      // }
+    }
+  }
+}
+.c-antd-group-cropimg {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: block;
+  height: auto;
+}
+.c-title-hid {
+  @include excerpt(1.2, 2);
+}
+.c-voucher-loadmore {
+  color: $color-secondary !important;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.m-filter-search {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 98 !important;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(85, 85, 85, 0.1)),
+    to(rgba(85, 85, 85, 0.01))
+  ) !important;
+  background: -webkit-linear-gradient(top, rgba(85, 85, 85, 0.1), rgba(85, 85, 85, 0.01)) !important;
+  background: linear-gradient(180deg, rgba(85, 85, 85, 0.1), rgba(85, 85, 85, 0.01)) !important;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 5px 10px rgba(92, 103, 153, 0.2) !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 5px 10px rgba(92, 103, 153, 0.2) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  backdrop-filter: blur(10px) !important;
+  background-position: 50% !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+button {
+  &:focus {
+    box-shadow: none !important;
+  }
+}
+
+.c-has-end {
+  display: block;
+  text-align: center;
+  font-weight: 700;
+}
+
+.c-main-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  h2 {
+    text-transform: uppercase;
+    font-size: 20px;
+    color: $color-black;
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: 0;
+  }
+  span {
+    display: block;
+    color: $color-primary;
+  }
+}
+
+.c-flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.c-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.c-inline-flex-end {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.c-default-image {
+  .is-image {
+    position: relative;
+    z-index: 1;
+    padding-top: 100%;
+    .is-outer {
+      width: 100%;
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      display: flex;
+      justify-content: center;
+      img {
+        width: 100%;
+        @include border-radius(10px);
+      }
+    }
+  }
+}
+
+.c-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 22px;
+}
+
+.c-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.c-cslider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.c-cslider:before {
+  position: absolute;
+  content: '';
+  height: 15px;
+  width: 15px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .c-cslider {
+  background-color: $color-secondary;
+}
+
+input:focus + .c-cslider {
+  box-shadow: 0 0 1px $color-secondary;
+}
+
+input:checked + .c-cslider:before {
+  -webkit-transform: translateX(37px);
+  -ms-transform: translateX(37px);
+  transform: translateX(37px);
+}
+
+/* Rounded sliders */
+.c-cslider.round {
+  border-radius: 34px;
+}
+
+.c-cslider.round:before {
+  border-radius: 50%;
+}
+
+.is-white {
+  color: $color-white !important;
+}
+.d-breadcrumb-voucher {
+  background: $color-white;
+}
+.is-remove-border {
+  border-bottom: none !important;
+}
+.is-remove-paddingbottom {
+  padding-bottom: 0 !important;
+}
+.m-body {
+  background: $color-white;
+  min-height: 100vh;
+  font-family: $font-sour;
+  position: relative;
+  z-index: 1;
+  &.is-bgbody-white {
+    background: $color-white;
+  }
+  .is-line {
+    background: $color-bg3;
+    height: 5px;
+    display: block;
+  }
+}
+.d-body {
+  min-height: calc(100% - 125px);
+  font-family: $font-roboto;
+}
+.d-content {
+  min-height: calc(100vh - 140px);
+}
+.form-group {
+  &.is-dropdown-nav {
+    position: relative;
+    z-index: 1;
+    &:before {
+      content: '';
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      margin-top: -4px;
+      right: 10px;
+      pointer-events: none;
+      background-image: url('/images/dropdown-nav.png');
+      width: 14px;
+      height: 7px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .form-control {
+      padding-right: 60px;
+      &.active {
+        color: $color-black !important;
+      }
+    }
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.md-breadcrumb {
+  padding: 20px 0 15px 0;
+  border-bottom: 1px solid #e2e2e2;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      display: inline-block;
+      margin-right: 20px;
+      a {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        &:hover {
+          span {
+            color: $color-secondary;
+          }
+        }
+      }
+      span {
+        font-size: 16px;
+        color: $color-primary;
+        display: inline-block;
+        @include transition-default;
+      }
+      img {
+        width: 10px;
+      }
+      &:first-child {
+        span {
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+}
+.c-component-tab {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    li {
+      padding: 13px 0 10px;
+      width: percentage(1/3);
+      text-align: center;
+      margin-bottom: 15px;
+      cursor: pointer;
+      &.active {
+        border-bottom: 1px solid $color-secondary;
+      }
+    }
+  }
+}
+
+.background-gray {
+  background-color: $color-bg3;
+}
+
+.c-pointlogo {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ee0033;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  @include border-radius(50%);
+  font-weight: 700;
+  margin-left: 2px;
+  color: #ee0033 !important;
+  text-align: center;
+  font-size: 13px !important;
+}
+
+//example responsive css
+@media (min-width: $screen-sm-min) {
+  //mobile lanscape
+}
+
+@media (min-width: $screen-sm-phone-large) {
+  //ipad portrait
+  .c-antd-cropimg {
+    --heightUpload: 120px;
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  //ipad portrait
+  .c-pointlogo {
+    margin-left: 5px;
+  }
+}
+@media (min-width: $screen-lg-min) {
+  //ipad lanscape & pc 1024x768px
+  .c-title-hid {
+    @include excerpt(1.2, 3);
+  }
+  .c-component-tab {
+    width: 50%;
+  }
+  .form-group {
+    &.is-dropdown-nav {
+      .form-control {
+        height: 59px;
+        font-size: 20px;
+        // &.active {
+        //   color: $color-black !important;
+        // }
+      }
+    }
+  }
+}
+@media (min-width: $screen-xl-min) {
+  //pc & mac 1280px grow up
+}
+@media (min-width: 1440px) {
+  //pc & mac 1440px grow up
+}
+@media (min-width: 1900px) {
+  //pc & mac 1900px grow up
+}
+//end example responsive css
+/*---------- end example css ----------*/
